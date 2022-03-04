@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylereset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><img src="images/logo.svg" alt="Splitter Logo" /></header>
+    <main class="container">
+      <form class="tip-input">
+        <p for="bill">Bill</p>
+        <input type="number" name="bill" id="bill" placeholder="0" min="1" />
+        <p for="tip-percent">Select Tip %</p>
+        <span id="btn-grid">
+          <button
+            type="button"
+            class="tip-percent-input"
+            onClick="reply_click(this.value)"
+            value="0.05"
+          >
+            5%
+          </button>
+          <button
+            type="button"
+            class="tip-percent-input"
+            onClick="reply_click(this.value)"
+            value="0.10"
+          >
+            10%
+          </button>
+          <button
+            type="button"
+            class="tip-percent-input"
+            onClick="reply_click(this.value)"
+            value="0.15"
+          >
+            15%
+          </button>
+          <button
+            type="button"
+            onClick="reply_click(this.value)"
+            class="tip-percent-input"
+            value="0.25"
+          >
+            25%
+          </button>
+          <button
+            type="button"
+            class="tip-percent-input"
+            onClick="reply_click(this.value)"
+            value="0.50"
+          >
+            50%
+          </button>
+
+          <input
+            type="number"
+            id="custom-tip"
+            class="tip-percent-input"
+            placeholder="Custom"
+            min="1"
+          />
+        </span>
+        <p>Number of People</p>
+        <input
+          type="number"
+          name="people"
+          id="people"
+          placeholder="1"
+          min="1"
+        />
+      </form>
+
+      <section class="results">
+        <hgroup>
+          <h3>Tip Amount</h3>
+          <p>/ person</p>
+        </hgroup>
+        <h2 class="final-tally" id="tip-pp">$0.00</h2>
+        <hgroup>
+          <h3>Total</h3>
+          <p>/ person</p>
+        </hgroup>
+        <h2 class="final-tally" id="total-pp">$0.00</h2>
+        <button type="button" class="reset">Reset</button>
+      </section>
+    </main>
+
+    <div type="button" class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="treywilletto.com">Trey Willetto</a>.
+      </p>
+    </div>
+    <script src="tip.js"></script>
+  </body>
+</html>
